@@ -1,0 +1,62 @@
+%=====================导=======言==============================
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{titlesec}
+\usepackage{lettrine}
+\usepackage{CJK}
+\titleformat{\section}{\centering\LARGE\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\bfseries\itshape\Large}{\thesubsection}{1em}{}
+
+%\renewcommand\thesection{\Roman{section}.} 罗马编号
+%\renewcommand{\thesubsection}{\roman{subsection}.}\\罗马编号
+%======================Include Packages========================
+
+\usepackage[23333]{MCMthesis}  %队号在这里填写
+\problem{H}  %选题
+%===============设置正文和数学字体=============================
+%有些字体需要安装一些字体文件，注意辨别。
+%我参照 MCM论文集的字体 使用如下宏包来定制字体。
+\usepackage{palatino}
+%\usepackage[center]{titlesec}
+
+%设置段落之间的距离，若不需要删除或者注释掉即可。
+\setlength\parskip{.5\baselineskip}
+
+\def\abstractname{Summary}%可修改摘要名称
+
+%==========================论文标题===============================
+
+\title{\huge \textbf{We are titles}}
+\author{ \team}
+\date{\today}
+
+%=================================================================
+%==================================================================
+\begin{document}
+%摘要需要放在maketitle之前才能保证运行正常
+%====================摘=======要===================================
+\begin{abstract}
+
+\par dklfjalsk
+\par \textbf{Keywords:} a, b, c, d 
+
+\end{abstract}
+\pagestyle{fancy} 
+\maketitle
+
+\newpage                                                          %
+%==================================================================
+\begin{center}
+{\huge \textbf{This is a template}}\\
+\author{Dicint}
+\end{center}
+
+%目录
+\tableofcontents   
+\pagestyle{fancy}                            
+\newpage
+\pagestyle{fancy}                                                     
+%正文
+\input{body.tex}
+
+\end{document}

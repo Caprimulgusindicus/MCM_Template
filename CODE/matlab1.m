@@ -1,0 +1,9 @@
+net=newff(minmax(p),[1,1],{'logsig','purelin'},'traingda');
+net.trainParam.goal=0.001;
+net.trainParam.show=20;
+net.trainParam.epochs=1000;
+net.trainParam.min_grad=1e-10;
+net.trainParam.mc=0.95;
+[net,tr]=train(net,p,t);
+t1=sim(net,p*0.001);
+t=t1*1000
